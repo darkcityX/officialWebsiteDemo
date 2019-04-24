@@ -1,0 +1,27 @@
+.reisze {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body {
+  font-family: "Facto", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+menu {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style-type: none;
+}
+a {
+  color: #7A7977;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
