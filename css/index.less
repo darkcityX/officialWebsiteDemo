@@ -4,9 +4,11 @@
     left: 0;
     z-index: 100;
     padding: 20px 0;
-    width: 100%;
+	width: 100%;
+	min-width: 992px;
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.98);
+	background-color: rgba(255, 255, 255, 0.98);
+	min-width: 992px;
     .header-left{
         a{
             display: block;
@@ -19,7 +21,8 @@
         ul{
             font-size: 0;
             height: 100%;
-            text-align: center;
+			text-align: center;
+			white-space: nowrap;
             li{
                 margin-right: 10px;
                 position: relative;
@@ -270,4 +273,23 @@
         }
     }
     
+}
+
+.footer{
+	padding: 2rem;
+	background: #383736;
+	.model1{
+		.modelRight{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+			ul{
+				width: 100%;
+				li:first-child{
+					border-bottom: 1px solid #f5f5f5;
+				}
+			}
+		}	
+	}
 }
