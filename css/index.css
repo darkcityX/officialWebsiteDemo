@@ -52,9 +52,13 @@
   }
   .header .header-center #meun1_1 a span {
     position: absolute;
-    right: 0px;
-    bottom: 0;
-    font-size: 6px;
+    right: -6px;
+    bottom: -2px;
+    font-size: 12px;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -o-transform: scale(0.6);
+    transform: scale(0.6);
   }
   .header .header-right li {
     padding: 4px 10px;
@@ -144,6 +148,15 @@
   }
   .swiper .carousel-inner {
     height: calc(88vh);
+  }
+  .swiper .carousel-inner .d-block {
+    animation: imgScale 10s;
+    /* Firefox */
+    -moz-animation: imgScale 10s;
+    /* Safari and Chrome */
+    -webkit-animation: imgScale 10s;
+    /* Opera */
+    -o-animation: imgScale 10s;
   }
   .swiper .carousel-inner .carousel-caption {
     display: inline-block;
@@ -359,6 +372,117 @@
   }
 }
 @media (max-width: 991.98px) {
+  .swiper .carousel .carousel-indicators {
+    bottom: -10px;
+  }
+  .swiper .carousel .carousel-inner .carousel-item .d-block {
+    max-height: 190px;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    animation: imgScale 5s;
+    /* Firefox */
+    -moz-animation: imgScale 5s;
+    /* Safari and Chrome */
+    -webkit-animation: imgScale 5s;
+    /* Opera */
+    -o-animation: imgScale 5s;
+  }
+  .swiper .carousel .carousel-inner .carousel-item .carousel-caption {
+    margin: 0;
+    padding: 0;
+    left: 10px;
+    bottom: 16px;
+    text-align: left;
+    opacity: 1;
+    animation: tobottom 1s;
+    /* Firefox */
+    -moz-animation: tobottom 1s;
+    /* Safari and Chrome */
+    -webkit-animation: tobottom 1s;
+    /* Opera */
+    -o-animation: tobottom 1s;
+  }
+  .swiper .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+    color: #fff;
+    font-size: 16px;
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  .swiper .carousel .carousel-inner .carousel-item .carousel-caption p {
+    margin: 0;
+    padding: 2px 6px;
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    text-align: left;
+    border: 1px solid #fff;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    animation: myfirst 5s;
+    /* Firefox */
+    -moz-animation: myfirst 5s;
+    /* Safari and Chrome */
+    -webkit-animation: myfirst 5s;
+    /* Opera */
+    -o-animation: myfirst 5s;
+  }
+  .swiper .carousel .carousel-inner .carousel-item .carousel-caption p:not(.more) {
+    display: none;
+  }
+  .swiper .carousel .carousel-control-prev {
+    display: none;
+  }
+  .swiper .carousel .carousel-control-next {
+    display: none;
+  }
+  .floor1 .container {
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    background: #efefef;
+  }
+  .floor1 .container .row {
+    margin: 0;
+    padding: 0;
+  }
+  .floor1 .container .row .item {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  .floor1 .container .row .item .imgView {
+    width: 100%;
+  }
+  .floor1 .container .row .item .imgView img {
+    max-width: 100%;
+  }
+  .floor1 .container .row .item .desc {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: 300px;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  .floor1 .container .row .item .desc h4 {
+    color: #fff;
+  }
+  .floor1 .container .row .item .desc p:not(.more) {
+    display: none;
+  }
+  .floor1 .container .row .item .desc .more {
+    padding: 4px 40px;
+    display: inline-block;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: solid 1px rgba(255, 255, 255, 0.2);
+  }
+  .floor1 .container .row:last-child .item:last-child {
+    margin-bottom: 0;
+  }
   .footer {
     padding: 1rem 10px;
     background: #383736;
@@ -438,6 +562,71 @@
     color: #f5f5f5;
     font-size: 14px;
     text-align: center;
+  }
+}
+@keyframes imgScale {
+  from {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/**
+ * 动画————位移加渐显
+ animation:tobottom 1s;						
+ -moz-animation:tobottom 1s; 
+ -webkit-animation:tobottom 1s; 
+ -o-animation:tobottom 1s; 
+ *
+*/
+@keyframes tobottom {
+  from {
+    bottom: 32px;
+    opacity: 0;
+  }
+  to {
+    bottom: 16px;
+    opacity: 0.9;
+  }
+}
+/* Firefox */
+@-moz-keyframes tobottom {
+  from {
+    bottom: 32px;
+    opacity: 0;
+  }
+  to {
+    bottom: 16px;
+    opacity: 0.9;
+  }
+}
+/* Safari and Chrome */
+@-webkit-keyframes tobottom {
+  from {
+    bottom: 32px;
+    opacity: 0;
+  }
+  to {
+    bottom: 16px;
+    opacity: 0.9;
+  }
+}
+/* Opera */
+@-o-keyframes tobottom {
+  from {
+    bottom: 32px;
+    opacity: 0;
+  }
+  to {
+    bottom: 16px;
+    opacity: 0.9;
   }
 }
 /**
